@@ -1,0 +1,11 @@
+/* Style the li element as a tag */
+.c-Tag {
+    background: var(--almost-white);
+    border: 1px solid var(--dark-white);
+    border-radius: 4px;
+    list-style: none;
+    display: inline;
+    padding: 2px 8px;
+    font-size: 12px;
+    margin-right: 4px;
+}

@@ -1,0 +1,13 @@
+/* Center-align the avatar image */
+.c-Avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Size and round the avatar image */
+.c-Avatar img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}

@@ -1,0 +1,37 @@
+{
+  "name": "pscanf.com",
+  "description": "pscanf.com website",
+  "version": "1.0.0",
+  "author": "Paolo Scanferla <paolo.scanferla@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "precommit": "yarn lint",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "prettier": "prettier '@(src|content)/**/*.@(js|css|md)'",
+    "prettify": "yarn prettier --write",
+    "lint:prettier": "yarn prettier --list-different",
+    "lint:eslint": "eslint src",
+    "lint": "yarn lint:eslint && yarn lint:prettier",
+    "dev": "react-static start",
+    "build": "rimraf dist && react-static build"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "date-fns": "^1.29.0",
+    "htmr": "0.7.0",
+    "jdown": "^0.6.4",
+    "lodash": "^4.17.10",
+    "normalize.css": "^8.0.0",
+    "react-icons": "^2.2.7",
+    "react-static": "^5.9.7"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.1",
+    "eslint": "^5.0.1",
+    "eslint-plugin-react": "^7.10.0",
+    "husky": "^0.14.3",
+    "prettier": "^1.13.7",
+    "rimraf": "^2.6.2"
+  }
+}

@@ -1,0 +1,14 @@
+/* Center-align links */
+.c-ContactLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Align icons and make them the same size */
+.c-ContactLinks a {
+    font-size: 22px;
+    color: var(--black);
+    padding-left: 4px;
+    padding-right: 4px;
+}

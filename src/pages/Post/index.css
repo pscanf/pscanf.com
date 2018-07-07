@@ -1,0 +1,27 @@
+/* Restrict page width and center it */
+.p-Post {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Decrease margin between post title and date */
+.p-Post-title {
+    margin-top: 32px;
+    margin-bottom: 18px;
+}
+
+/* Style post date font */
+.p-Post-date {
+    font-style: italic;
+}
+
+/* Increase margin between post header and content */
+.p-Post header {
+    margin-bottom: 32px;
+}
+
+/* Improve content line height to make it more readable */
+.p-Post-content {
+    line-height: 1.8em;
+}

@@ -1,0 +1,35 @@
+/*
+*   When the screen is wide enough, put posts and projects sections on the same
+*   row, otherwise put them one under the other
+*/
+@media only screen and (min-width: 767px) {
+    .p-Home-content-links {
+        display: flex;
+    }
+}
+.p-Home-content-links > section {
+    width: 100%;
+}
+
+/*
+*   When the posts and projects sections are vertically stacked, increase their
+*   vertical spacing and reduce the verticalspacing of the intro
+*/
+@media only screen and (max-width: 768px) {
+    .p-Home-content-links > section {
+        margin-bottom: 48px;
+    }
+    .p-Home .c-Intro {
+        margin-bottom: 48px;
+    }
+}
+
+/* Horizontally center posts and projects sections */
+.p-Home-content-links {
+    width: 100%;
+    text-align: center;
+}
+/* Remove bullets from posts and projects lists */
+.p-Home-content-links li::before {
+    content: none;
+}

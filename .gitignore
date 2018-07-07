@@ -1,0 +1,11 @@
+# npm and yarn files
+/node_modules
+package-lock.json
+npm-error.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# react-static dist and dev files
+/dist
+/tmp

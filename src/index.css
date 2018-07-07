@@ -1,0 +1,23 @@
+@import "~normalize.css";
+@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,700");
+
+@import "./utils/colors.css";
+
+/* Set base text look */
+html {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.6em;
+    color: var(--black);
+}
+
+/* Apply border-box layout model to all elements */
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}

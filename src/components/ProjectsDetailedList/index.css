@@ -1,0 +1,71 @@
+/*
+*   Increase vertical spacing between projects, and ensure the same spacing both
+*   when the project is expanded and when the project is collapsed
+*/
+.c-ProjectsDetailedList-project {
+    margin-bottom: 16px;
+}
+.c-ProjectsDetailedList-project.expanded {
+    margin-bottom: -1px;
+}
+
+/* Decrease vertical spacing between project title and content */
+.c-ProjectsDetailedList-project-title {
+    margin-bottom: -8px;
+}
+
+/* Decrease font weight of short description */
+.c-ProjectsDetailedList-project-title-short-description {
+    font-weight: 300;
+}
+
+/* Style the link icon */
+.c-ProjectsDetailedList-project-title a {
+    font-size: 12px;
+    position: relative;
+    top: -2px;
+    left: 6px;
+}
+
+/* Increase vertical spacing between project title and tags */
+.c-ProjectsDetailedList-project .c-Tags {
+    margin-top: 4px;
+}
+
+/*
+*   Decrease font size of the description, and hide it when the project is not
+*   expanded
+*/
+.c-ProjectsDetailedList-project-description {
+    font-size: 16px;
+    display: none;
+}
+.c-ProjectsDetailedList-project.expanded
+    .c-ProjectsDetailedList-project-description {
+    display: initial;
+}
+
+/*
+*   Decrease the top margin from the first paragraph in the description, and
+*   remove the bottom margin from the last paragraph
+*/
+.c-ProjectsDetailedList-project-description p:first-of-type {
+    margin-top: 8px;
+}
+.c-ProjectsDetailedList-project-description p:last-of-type {
+    margin-bottom: 0px;
+}
+
+/* Style and correctly position the show more / show less button */
+.c-ProjectsDetailedList-project button {
+    background: none;
+    outline: none;
+    border: 0px;
+    padding: 0px;
+    font-size: 12px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.c-ProjectsDetailedList-project button:hover {
+    text-decoration: underline;
+}

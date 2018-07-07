@@ -1,0 +1,48 @@
+/* Set size of section title, reduce font weight */
+.c-ProjectsList-title {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/*
+*   Style ul bullets, working around Firefox bug
+*   https://bugzilla.mozilla.org/show_bug.cgi?id=36854
+*/
+.c-ProjectsList ul {
+    padding-left: 18px;
+}
+.c-ProjectsList li {
+    list-style-type: none;
+    position: relative;
+}
+.c-ProjectsList li::before {
+    content: "●";
+    position: absolute;
+    font-size: 14px;
+    left: -20px;
+}
+
+/* Style project-link text */
+.c-ProjectsList-project a {
+    text-decoration: none;
+    color: var(--black);
+}
+.c-ProjectsList-project:hover a {
+    text-decoration: underline;
+}
+.c-ProjectsList-project a:visited {
+    color: var(--light-black);
+}
+
+/* Make project name stand out and project short description smaller */
+.c-ProjectsList-project-name {
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+.c-ProjectsList-project-short-description {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: italic;
+    margin-top: 1px;
+    margin-bottom: 4px;
+}

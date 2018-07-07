@@ -1,0 +1,31 @@
+/* Style nav bar */
+.c-NavBar {
+    width: 100%;
+    border-bottom: 1px solid var(--grey);
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Avoid the "standard link" look for links in the nav bar */
+.c-NavBar a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+/* Make logo stand out */
+.c-NavBar-logo {
+    font-weight: 400;
+}
+
+/* Style the separator */
+.c-NavBar-separator::after {
+    padding: 8px;
+    content: "|";
+}
+
+/* Make active links bold */
+.c-NavBar-link.active {
+    font-weight: 400;
+}

@@ -1,0 +1,17 @@
+/* Cap website width and center its content */
+.p-Root {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Pad nav bar */
+.p-Root .c-NavBar {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* Pad content */
+.p-Root-content {
+    padding: 8px;
+}
