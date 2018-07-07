@@ -23,7 +23,7 @@ export default () => (
         </a>
         <a
             className="c-ContactLinks-mail"
-            href="mailto://paolo.scanferla@gmail.com"
+            href="mailto:paolo.scanferla@gmail.com"
         >
             <MailIcon />
         </a>
