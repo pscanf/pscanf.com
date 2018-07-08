@@ -8,12 +8,13 @@
 /* Decrease margin between post title and date */
 .p-Post-title {
     margin-top: 32px;
-    margin-bottom: 18px;
+    margin-bottom: 8px;
 }
 
 /* Style post date font */
 .p-Post-date {
     font-style: italic;
+    font-size: 16px;
 }
 
 /* Increase margin between post header and content */
