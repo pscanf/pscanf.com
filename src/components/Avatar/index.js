@@ -1,13 +1,12 @@
 import React from "react";
 
-import pathJoin from "../../utils/pathJoin";
 import "./index.css";
 
-export default ({ websiteBasePath }) => (
-    <section className="c-Avatar">
+export default () => (
+    <div className="c-Avatar">
         <img
-            src={pathJoin(websiteBasePath, "/images/profile-picture.jpg")}
-            alt="Profile picture"
+            src="https://s.gravatar.com/avatar/10628ce7543001042495e0b883f8ccdd?s=200"
+            alt="Paolo Scanferla"
         />
-    </section>
+    </div>
 );

@@ -5,15 +5,20 @@
     margin-right: auto;
 }
 
-/* Decrease margin between post title and date */
+/*
+*   Decrease margin between post title and date, reset line-height (which is
+*   somehow decreased by the global html setting)
+*/
 .p-Post-title {
     margin-top: 32px;
-    margin-bottom: 18px;
+    margin-bottom: 8px;
+    line-height: initial;
 }
 
 /* Style post date font */
 .p-Post-date {
     font-style: italic;
+    font-size: 16px;
 }
 
 /* Increase margin between post header and content */
