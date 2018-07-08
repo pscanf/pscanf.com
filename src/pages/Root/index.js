@@ -9,12 +9,14 @@ export default class Root extends React.Component {
     render() {
         return (
             <Router>
-                <section className="p-Root">
-                    <NavBar />
+                <div className="p-Root">
+                    <header role="banner">
+                        <NavBar />
+                    </header>
                     <main className="p-Root-content">
                         <Routes />
                     </main>
-                </section>
+                </div>
             </Router>
         );
     }

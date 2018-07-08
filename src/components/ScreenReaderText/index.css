@@ -1,0 +1,5 @@
+/* Visually hide content intended only for screen readers */
+.c-ScreenReaderText {
+    position: absolute;
+    left: -10000px;
+}

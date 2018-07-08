@@ -4,10 +4,10 @@ import pathJoin from "../../utils/pathJoin";
 import "./index.css";
 
 export default ({ websiteBasePath }) => (
-    <section className="c-Avatar">
+    <div className="c-Avatar">
         <img
             src={pathJoin(websiteBasePath, "/images/profile-picture.jpg")}
-            alt="Profile picture"
+            alt="Paolo Scanferla"
         />
-    </section>
+    </div>
 );

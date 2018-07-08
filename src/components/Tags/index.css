@@ -1,4 +1,5 @@
-/* Remove left padding */
+/* Remove left padding, reduce line height */
 .c-Tags {
+    line-height: 1.3em;
     padding: 0px;
 }
