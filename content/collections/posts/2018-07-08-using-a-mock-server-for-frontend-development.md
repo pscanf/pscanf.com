@@ -2,10 +2,9 @@
 slug: 2018-07-08-using-a-mock-server-for-frontend-development
 date: 2018-07-08
 title: Using a mock server for frontend development
-tags:
-  - frontend
-  - tooling
-  - mock server
+description: |
+  What is a mock server? Why is it a helpful tool for developing frontend
+  applications? Which mock server should I choose?
 ---
 
 One of the most useful tools that I use when developing frontend Single Page
