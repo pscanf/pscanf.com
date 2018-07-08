@@ -1,12 +1,8 @@
 /*
-*   Increase vertical spacing between projects, and ensure the same spacing both
-*   when the project is expanded and when the project is collapsed
+*   Decrease vertical spacing between projects
 */
 .c-ProjectsDetailedList-project {
-    margin-bottom: 16px;
-}
-.c-ProjectsDetailedList-project.expanded {
-    margin-bottom: -1px;
+    margin-bottom: -3px;
 }
 
 /* Decrease vertical spacing between project title and content */
@@ -27,9 +23,14 @@
     left: 6px;
 }
 
-/* Increase vertical spacing between project title and tags */
+/* Adjust vertical spacing around projects tags */
 .c-ProjectsDetailedList-project .c-Tags {
-    margin-top: 4px;
+    margin-top: 7px;
+    margin-bottom: 3px;
+}
+.c-ProjectsDetailedList-project.c-ProjectsDetailedList-project.expanded
+    .c-Tags {
+    margin-bottom: 0px;
 }
 
 /*
@@ -56,16 +57,10 @@
     margin-bottom: 0px;
 }
 
-/* Style and correctly position the show more / show less button */
-.c-ProjectsDetailedList-project button {
-    background: none;
-    outline: none;
-    border: 0px;
-    padding: 0px;
+/* Style the show more / show less link */
+.c-ProjectsDetailedList-project a {
     font-size: 12px;
     font-weight: 300;
     cursor: pointer;
-}
-.c-ProjectsDetailedList-project button:hover {
-    text-decoration: underline;
+    color: var(--black);
 }

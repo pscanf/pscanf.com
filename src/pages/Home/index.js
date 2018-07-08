@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouteData } from "react-static";
+import { Head, withRouteData } from "react-static";
 
 import Intro from "../../components/Intro";
 import PostsList from "../../components/PostsList";
@@ -8,6 +8,9 @@ import "./index.css";
 
 export default withRouteData(({ intro, lastThreePosts, topThreeProjects }) => (
     <section className="p-Home">
+        <Head>
+            <title>{"pscanf personal website"}</title>
+        </Head>
         <Intro intro={intro} />
         <section className="p-Home-content-links">
             <PostsList title="Read my latest articles" posts={lastThreePosts} />

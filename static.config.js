@@ -60,12 +60,12 @@ export default {
             {
                 path: "/about",
                 component: "src/pages/About",
-                getData: () => ({ about, projects, websiteBasePath })
+                getData: () => ({ about, projects })
             },
             {
-                path: "/404",
+                is404: true,
                 component: "src/pages/NotFound",
-                getData: () => ({ about, projects, websiteBasePath })
+                getData: () => ({ websiteBasePath })
             }
         ];
     }

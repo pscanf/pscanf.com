@@ -6,18 +6,21 @@ import React from "react";
 import ExternalLinkIcon from "react-icons/lib/fa/external-link";
 
 import "./index.css";
+import ScreenReaderText from "../ScreenReaderText";
 import Tags from "../Tags";
 
 export default class ProjectsDetailedList extends React.Component {
     state = { expandedProjects: {} };
 
-    getToggleProject = project => () =>
+    getToggleProject = project => evt => {
+        evt.preventDefault();
         this.setState({
             expandedProjects: {
                 ...this.state.expandedProjects,
                 [project.name]: !this.state.expandedProjects[project.name]
             }
         });
+    };
 
     renderProject = project => {
         const isExpanded = !!this.state.expandedProjects[project.name];
@@ -45,15 +48,18 @@ export default class ProjectsDetailedList extends React.Component {
                         rel="noopener noreferrer"
                     >
                         <ExternalLinkIcon />
+                        <ScreenReaderText>
+                            {"Project homepage"}
+                        </ScreenReaderText>
                     </a>
                 </h4>
                 <Tags tags={project.technologies} />
                 <section className="c-ProjectsDetailedList-project-description">
                     {convert(project.contents)}
                 </section>
-                <button onClick={this.getToggleProject(project)}>
+                <a href="#" onClick={this.getToggleProject(project)}>
                     {showMoreOrLess}
-                </button>
+                </a>
             </li>
         );
     };
