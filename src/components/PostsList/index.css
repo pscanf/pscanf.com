@@ -1,7 +1,6 @@
-/* Set size of section title, reduce font weight */
+/* Reduce the size of the section title */
 .c-PostsList-title {
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 16px;
 }
 
 /*
@@ -9,7 +8,7 @@
 *   https://bugzilla.mozilla.org/show_bug.cgi?id=36854
 */
 .c-PostsList ul {
-    padding-left: 18px;
+    padding-left: 40px;
 }
 .c-PostsList li {
     list-style-type: none;
@@ -18,8 +17,9 @@
 .c-PostsList li::before {
     content: "●";
     position: absolute;
-    font-size: 14px;
-    left: -20px;
+    font-size: 16px;
+    top: -2px;
+    left: -22px;
 }
 
 /* Style post-link text */
@@ -30,17 +30,12 @@
 .c-PostsList-post:hover a {
     text-decoration: underline;
 }
-.c-PostsList-post a:visited {
-    color: var(--light-black);
-}
 
-/* Make post title stand out and post date smaller */
+/* Make post title stand out and make post date smaller */
 .c-PostsList-post-title {
-    font-weight: 400;
     margin-bottom: 0px;
 }
 .c-PostsList-post-date {
     font-size: 16px;
-    font-weight: 300;
-    font-style: italic;
+    color: var(--light-black);
 }

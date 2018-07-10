@@ -13,35 +13,14 @@ export default {
     basePath: websiteBasePath,
     preact: true,
     getRoutes: async () => {
-        const {
-            intro,
-            about,
-            privacyPolicy,
-            posts = [],
-            projects = []
-        } = await jdown(join(__dirname, "/content"));
+        const { about, privacyPolicy, posts = [], projects = [] } = await jdown(
+            join(__dirname, "/content")
+        );
         return [
             {
                 path: "/",
                 component: "src/pages/Home",
-                getData: () => {
-                    const lastThreePosts = sortBy(posts, "date")
-                        .slice(-3)
-                        .reverse()
-                        .map(post => ({
-                            slug: post.slug,
-                            title: post.title,
-                            date: post.date
-                        }));
-                    const topThreeProjects = sortBy(projects, "position")
-                        .slice(0, 3)
-                        .map(project => ({
-                            name: project.name,
-                            shortDescription: project.shortDescription,
-                            homepage: project.homepage
-                        }));
-                    return { intro, lastThreePosts, topThreeProjects };
-                }
+                getData: () => ({ about })
             },
             {
                 path: "/blog",
@@ -62,9 +41,9 @@ export default {
                 }))
             },
             {
-                path: "/about",
-                component: "src/pages/About",
-                getData: () => ({ about, projects })
+                path: "/projects",
+                component: "src/pages/Projects",
+                getData: () => ({ projects })
             },
             {
                 path: "/privacy-policy",

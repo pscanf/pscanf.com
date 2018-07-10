@@ -15,8 +15,8 @@ export default () => (
                 {"blog"}
             </Link>
             <span className="c-NavBar-separator" />
-            <Link className="c-NavBar-link" exact={true} to="/about">
-                {"about"}
+            <Link className="c-NavBar-link" exact={true} to="/projects">
+                {"projects"}
             </Link>
         </span>
     </nav>
