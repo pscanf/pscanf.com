@@ -1,13 +1,12 @@
 @import "~normalize.css";
-@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
 
 @import "./utils/colors.css";
 
 /* Set base text look */
 html {
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
     line-height: 1.6em;
     color: var(--black);
 }

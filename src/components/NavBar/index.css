@@ -4,6 +4,7 @@
     border-bottom: 1px solid var(--grey);
     height: 36px;
     display: flex;
+    font-size: 16px;
     justify-content: space-between;
     align-items: center;
 }
@@ -16,7 +17,7 @@
 
 /* Make logo stand out */
 .c-NavBar-logo {
-    font-weight: 400;
+    font-weight: 600;
 }
 
 /* Style the separator */
@@ -27,5 +28,5 @@
 
 /* Make active links bold */
 .c-NavBar-link.active {
-    font-weight: 400;
+    font-weight: 600;
 }

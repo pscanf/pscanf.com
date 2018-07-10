@@ -1,23 +1,18 @@
+import convert from "htmr";
 import React from "react";
 import { Head, withRouteData } from "react-static";
 
-import Intro from "../../components/Intro";
-import PostsList from "../../components/PostsList";
-import ProjectsList from "../../components/ProjectsList";
+import Avatar from "../../components/Avatar";
+import ContactLinks from "../../components/ContactLinks";
 import "./index.css";
 
-export default withRouteData(({ intro, lastThreePosts, topThreeProjects }) => (
+export default withRouteData(({ about }) => (
     <section className="p-Home">
         <Head>
-            <title>{"pscanf personal website"}</title>
+            <title>{"About pscanf"}</title>
         </Head>
-        <Intro intro={intro} />
-        <section className="p-Home-content-links">
-            <PostsList title="Read my latest articles" posts={lastThreePosts} />
-            <ProjectsList
-                title="Check out some of my projects"
-                projects={topThreeProjects}
-            />
-        </section>
+        <Avatar />
+        <ContactLinks />
+        {convert(about.contents)}
     </section>
 ));

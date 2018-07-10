@@ -8,6 +8,6 @@ export default withRouteData(({ posts }) => (
         <Head>
             <title>{"pscanf blog"}</title>
         </Head>
-        <PostsList title="All my articles" posts={posts} />
+        <PostsList title="My articles" posts={posts} />
     </section>
 ));

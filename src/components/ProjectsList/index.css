@@ -1,48 +1,88 @@
-/* Set size of section title, reduce font weight */
+/* Reduce the size of the section title */
 .c-ProjectsList-title {
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 16px;
 }
 
 /*
 *   Style ul bullets, working around Firefox bug
 *   https://bugzilla.mozilla.org/show_bug.cgi?id=36854
 */
-.c-ProjectsList ul {
-    padding-left: 18px;
+.c-ProjectsList > ul {
+    padding-left: 40px;
 }
-.c-ProjectsList li {
+.c-ProjectsList-project {
     list-style-type: none;
     position: relative;
 }
-.c-ProjectsList li::before {
+.c-ProjectsList-project::before {
     content: "●";
     position: absolute;
-    font-size: 14px;
-    left: -20px;
+    font-size: 16px;
+    top: -2px;
+    left: -22px;
 }
 
-/* Style project-link text */
-.c-ProjectsList-project a {
-    text-decoration: none;
-    color: var(--black);
-}
-.c-ProjectsList-project:hover a {
-    text-decoration: underline;
-}
-.c-ProjectsList-project a:visited {
-    color: var(--light-black);
+/*
+*   Decrease vertical spacing between projects
+*/
+.c-ProjectsList-project {
+    margin-bottom: -3px;
 }
 
-/* Make project name stand out and project short description smaller */
-.c-ProjectsList-project-name {
-    font-weight: 400;
+/* Decrease vertical spacing between project title and content */
+.c-ProjectsList-project-title {
+    margin-bottom: -8px;
+}
+
+/* Decrease font weight of short description */
+.c-ProjectsList-project-title-short-description {
+    font-weight: 300;
+}
+
+/* Style the link icon */
+.c-ProjectsList-project-title a {
+    font-size: 12px;
+    position: relative;
+    top: -2px;
+    left: 6px;
+}
+
+/* Adjust vertical spacing around projects tags */
+.c-ProjectsList-project .c-Tags {
+    margin-top: 7px;
+    margin-bottom: 3px;
+}
+.c-ProjectsList-project.c-ProjectsList-project.expanded .c-Tags {
     margin-bottom: 0px;
 }
-.c-ProjectsList-project-short-description {
+
+/*
+*   Decrease font size of the description, and hide it when the project is not
+*   expanded
+*/
+.c-ProjectsList-project-description {
     font-size: 16px;
+    display: none;
+}
+.c-ProjectsList-project.expanded .c-ProjectsList-project-description {
+    display: initial;
+}
+
+/*
+*   Decrease the top margin from the first paragraph in the description, and
+*   remove the bottom margin from the last paragraph
+*/
+.c-ProjectsList-project-description p:first-of-type {
+    margin-top: 8px;
+}
+.c-ProjectsList-project-description p:last-of-type {
+    margin-bottom: 0px;
+}
+
+/* Style the show more / show less link */
+.c-ProjectsList-project a {
+    font-size: 12px;
     font-weight: 300;
-    font-style: italic;
-    margin-top: 1px;
-    margin-bottom: 4px;
+    cursor: pointer;
+    color: var(--black);
 }

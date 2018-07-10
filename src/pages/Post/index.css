@@ -17,16 +17,11 @@
 
 /* Style post date font */
 .p-Post-date {
-    font-style: italic;
-    font-size: 16px;
+    color: var(--light-black);
+    font-size: 18px;
 }
 
 /* Increase margin between post header and content */
 .p-Post header {
     margin-bottom: 32px;
-}
-
-/* Improve content line height to make it more readable */
-.p-Post-content {
-    line-height: 1.8em;
 }
