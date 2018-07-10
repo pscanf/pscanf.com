@@ -8,7 +8,7 @@ import ProjectsDetailedList from "../../components/ProjectsDetailedList";
 import "./index.css";
 
 export default withRouteData(({ about, projects }) => (
-    <div className="p-About">
+    <section className="p-About">
         <Head>
             <title>{"About pscanf"}</title>
         </Head>
@@ -16,5 +16,5 @@ export default withRouteData(({ about, projects }) => (
         <ContactLinks />
         {convert(about.contents)}
         <ProjectsDetailedList title="Projects:" projects={projects} />
-    </div>
+    </section>
 ));

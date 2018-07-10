@@ -1,0 +1,13 @@
+/* Make the footer full-width */
+.c-WebsiteFooter {
+    padding-top: 50px;
+    width: 100%;
+    text-align: right;
+}
+
+/* Tone down links */
+.c-WebsiteFooter a {
+    font-size: 14px;
+    color: var(--black);
+    text-decoration: none;
+}

@@ -13,9 +13,13 @@ export default {
     basePath: websiteBasePath,
     preact: true,
     getRoutes: async () => {
-        const { about, intro, posts = [], projects = [] } = await jdown(
-            join(__dirname, "/content")
-        );
+        const {
+            intro,
+            about,
+            privacyPolicy,
+            posts = [],
+            projects = []
+        } = await jdown(join(__dirname, "/content"));
         return [
             {
                 path: "/",
@@ -61,6 +65,11 @@ export default {
                 path: "/about",
                 component: "src/pages/About",
                 getData: () => ({ about, projects })
+            },
+            {
+                path: "/privacy-policy",
+                component: "src/pages/PrivacyPolicy",
+                getData: () => ({ privacyPolicy })
             },
             {
                 is404: true,
