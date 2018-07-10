@@ -13,7 +13,7 @@
 
 /*
 *   When the posts and projects sections are vertically stacked, increase their
-*   vertical spacing and reduce the verticalspacing of the intro
+*   vertical spacing and reduce the vertical spacing of the intro
 */
 @media only screen and (max-width: 768px) {
     .p-Home-content-links > section {

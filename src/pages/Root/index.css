@@ -1,17 +1,25 @@
-/* Cap website width and center its content */
+/*
+*   Cap website width and center its content, and stick the footer at the bottom
+*   of the page
+*/
 .p-Root {
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.p-Root > main {
+    flex-grow: 1;
 }
 
-/* Pad nav bar */
-.p-Root .c-NavBar {
+/* Pad header, main, and footer */
+.p-Root > header,
+.p-Root > footer {
     padding-left: 8px;
     padding-right: 8px;
 }
-
-/* Pad content */
-.p-Root-content {
+.p-Root > main {
     padding: 8px;
 }
