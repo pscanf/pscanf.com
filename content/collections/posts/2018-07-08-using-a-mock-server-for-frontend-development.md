@@ -19,9 +19,9 @@ configuring the app so it directs its API calls to the mock server. The
 configuration for a mock server is usually kept in source control with the app,
 so that it's shared among developers and can be easily modified as needed.
 
-### Benefits
+## Benefits
 
-#### Easy development setup
+### Easy development setup
 
 First and foremost, when developing your frontend you don't have to _also_ start
 your backend, which is especially tedious (or nearly impossible) when the
@@ -38,7 +38,7 @@ where the backend is deployed. However this solution has some drawbacks:
 
 Which brings me to the next benefit.
 
-#### Simulating complex interactions and corner cases
+### Simulating complex interactions and corner cases
 
 The main point of a mock server is to simulate API responses, and since the mock
 server lives in your local development environment, it's much easier to change
@@ -49,7 +49,7 @@ results? With a mock server it's probably just a matter of changing a number in
 the configuration, while with a real backend you'd need to insert specifically
 crafted records in a database.
 
-#### Start building the app even if its backend doesn't exist yet
+### Start building the app even if its backend doesn't exist yet
 
 Many times I've been in the situation of not yet having a backend for the app I
 was about to build. Be it because the backend team was still busy on another
@@ -63,13 +63,13 @@ Moreover, I found this approach to be beneficial for the design of the API,
 since it explicits the needs of the client, making it easier to avoid pitfalls
 such as over-engineering and over-generalization.
 
-#### Get a bird's eye view of the API needed by your app
+### Get a bird's eye view of the API needed by your app
 
 What APIs does my app use? When using a mock server the answer is easy: the APIs
 implemented by the mock server. If an API is not there, during development the
 app would break when calling it, and the developer would notice.
 
-#### Make automated browser tests more reliable
+### Make automated browser tests more reliable
 
 Automated browser tests are notoriously flaky. One factor contributing to their
 flakiness is having them run on an app in a real, deployed environment, using a
@@ -84,7 +84,7 @@ end-to-end tests, but they can be a good fit for things like cross-browser
 testing, where we don't really care about how the backend behaves, and we don't
 want to be distracted by its failures.
 
-### Choosing a mock server
+## Choosing a mock server
 
 There are a few mock servers on the market, so choosing the right one for your
 project can be difficult. The two main features I look for when choosing a mock
