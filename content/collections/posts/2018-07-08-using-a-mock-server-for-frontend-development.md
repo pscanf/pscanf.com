@@ -28,7 +28,7 @@ your backend, which is especially tedious (or nearly impossible) when the
 backend is made of a myriad of microservices, each having their own database.
 
 An alternative approach I've often seen employed to solve this problem is to
-point your app to a remote development environment - shared by all the team -
+point the app to a remote development environment - shared by the entire team -
 where the backend is deployed. However this solution has some drawbacks:
 
 - you can't work if you're offline
@@ -63,7 +63,7 @@ Moreover, I found this approach to be beneficial for the design of the API,
 since it explicits the needs of the client, making it easier to avoid pitfalls
 such as over-engineering and over-generalization.
 
-### Get a bird's eye view of the API needed by your app
+### Get a bird's eye view of the APIs needed by your app
 
 What APIs does my app use? When using a mock server the answer is easy: the APIs
 implemented by the mock server. If an API is not there, during development the
@@ -81,8 +81,8 @@ easier to simulate corner cases, a very common occurrence in tests.
 
 Of course, tests against a mock server are not a replacement for truly
 end-to-end tests, but they can be a good fit for things like cross-browser
-testing, where we don't really care about how the backend behaves, and we don't
-want to be distracted by its failures.
+testing, where you don't really care about how the backend behaves, and you
+don't want to be distracted by its failures.
 
 ## Choosing a mock server
 
@@ -95,16 +95,17 @@ server are:
   probably should be distributed via npm, and be runnable in an npm script
 - **being easy to configure so it can mimic my API**: this depends a lot on the
   API. For instance, if the API is accurately described in an swagger
-  definition, I can choose a mock server that auto-generates endpoints in the
+  definition, I can choose a mock server that auto-generates endpoints from the
   definition
 
 I think the second point is the trickiest one, because APIs are often full of
 corner cases and ill-specified behaviors. That actually led me to write
 [my own mock server](https://github.com/staticdeploy/mock-server), which adopts
 a code-over-configuration approach to allow for maximum flexibility (at the
-expense of course of terseness, because you have to write your own endpoints).
+expense of course of terseness, since you have to write the code for mock
+endpoints).
 
-But of course there are other great mock servers out there, like
+But naturally there are other great mock servers out there, like
 [node-mock-server](https://github.com/smollweide/node-mock-server) and
 [MockServer](http://www.mock-server.com/). Just choose one, and I promise it'll
 improve your development workflow. :)
