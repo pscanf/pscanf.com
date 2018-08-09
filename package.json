@@ -22,7 +22,7 @@
     "jdown": "^0.6.4",
     "lodash": "^4.17.10",
     "normalize.css": "^8.0.0",
-    "react-icons": "^3.0.5",
+    "react-icons": "2.2.7",
     "react-static": "^5.9.7"
   },
   "devDependencies": {
