@@ -31,25 +31,8 @@ jobs:
 
       - run:
           name: Create website bundle
-          command: |
-            staticdeploy create-bundle \
-              --from dist \
-              --name pscanf.com \
-              --tag $CIRCLE_BRANCH \
-              --description "Commit $CIRCLE_SHA1" \
-              --fallbackAssetPath /404.html
+          command: staticdeploy bundle
 
       - run:
-          name: Deploy website bundle to pscanf.com/ or pscanf.com/_/branch
-          command: |
-            if [ $CIRCLE_BRANCH = "master" ]; then \
-              staticdeploy deploy \
-                --app pscanf.com \
-                --entrypoint pscanf.com/ \
-                --bundle pscanf.com:$CIRCLE_BRANCH \
-            ; else \
-              staticdeploy deploy \
-                --app pscanf.com \
-                --entrypoint pscanf.com/_/$CIRCLE_BRANCH/ \
-                --bundle pscanf.com:$CIRCLE_BRANCH \
-            ; fi
+          name: Deploy website bundle
+          command: staticdeploy deploy
